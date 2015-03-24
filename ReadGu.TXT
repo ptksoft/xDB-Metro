@@ -1,0 +1,199 @@
+﻿
+==[ xDB2013 ]==
+
+Copyright (X) PTKSOFT and Friend Corporation, All right Pirate!
+This software is license under law of Cambodia/Phanomphen.
+If you have question or suspection you maybe hit by CHAIR!
+
+For Cusomers Support please mail to: gofgab@gmail.com			;>
+For Politics/Law Support please mail to: vasit@pakgon.com			T_T
+For Movie/Money Support please mail to: puarns@gmail.com			@_@
+For Social/Event Support please mail to: worapot@pakgon.com		O_o'
+For System/Network Support please mail to: hanamijisaku@gmail.com		:O
+For Twins Child Support please mail to: ptksoft@gmail.com			:P
+
+What is new?
+
+==============================================================================
+Version 15.03.21.2108
+==============================================================================
+- Revise feature to Add&Replace file path when import from directory menu
+- Fix bug _ParseToFileName
+
+==============================================================================
+Version 14.04.07.2051
+==============================================================================
+- Modify Interface Best in Metro View and Surface Interface
+
+==============================================================================
+Version 13.10.22.1054
+==============================================================================
+- Add feature to double click from MovieStat windows then generate result of
+filter moview in MainForm by create new tab is current topic is difference
+- Change MovieDB function filter movie to force lower case on "TAG" and also
+force upper case on "ACTRESS"
+- Fix BUG "CheckFileConnect"
+- Fix BUG "General Stat Search" in MovieStat
+- Fix BUG Searching with FilePath, Alway use lower case for comparation
+
+==============================================================================
+Version 13.10.09.0755
+==============================================================================
+- Add "File Connect" Attribute "G" -> "Global Profile" when FilePath is empty
+
+==============================================================================
+Version 13.08.30.0038
+==============================================================================
+- Add delay in batch-file before restart Program (When update new version)
+
+==============================================================================
+Version 13.08.29.1818
+==============================================================================
+- Add old icon by use icon set from Visual-Studio 2008 for compatible issue
+with Windows XP
+- Fix bug disable Add FC/BC/SS1/SS2 when hash value of MovieProfile is empty
+- Change UI back to basic template for compatible with Windows XP
+- Add feature to filter invalid char that affected to build attribute into
+file name, prevent error when transform to filename
+
+==============================================================================
+Version 13.08.27.1347
+==============================================================================
+- Fix bug Cannot run program in WindowsXP, correct by remove Icons from form
+- Fix bug display overlap in Page MovieProfile
+- Revert back to use Compiler Visual Studio 2008 SP1 and compile target AnyCPU
+
+==============================================================================
+Version 13.08.25.1858
+==============================================================================
+- Fix bug Progress-Bar when build hashing file, to sync with real working task
+- Fix bug in Batch-File update program script
+
+==============================================================================
+Version 13.08.24.1300
+==============================================================================
+- Change menu usage for understanding, by move menu "File->Import Directory" 
+TO new menu "Profile->Import->Parse from File in Dir"
+- Adjust command "Delete File Path" also delete real file in disk too!
+- Change state of tab advanced to be invisible, show when click link "advance"
+- Add feature to save/restore position of MovieProfile windows
+- Fix Bug Cover1/Cover2/SS1/SS2 not refresh when select new Image
+
+==============================================================================
+Version 13.08.19.0955
+==============================================================================
+- Add Advance Tab for Advance Command and Extra Data
+- Add Button to delete last FilePath
+- Add Search by FilePath feature
+- Add Menu Option AutoBuildHash & DeletePictureFile & AllowSaveOfflineProfile
+- Add Feature can Edit GlobalProfile/OfflineProfile
+
+==============================================================================
+Version 13.08.16.0826
+==============================================================================
+- Add ShortCut Key for Actress/Tags/Search/Play
+- Disable button when BuildHash (Save/Close/FrontCover/BackCover/SS1/SS2)
+
+==============================================================================
+Version 13.08.10.0026
+==============================================================================
+- Move initial process to run in Pre-Enter Windows Environment for fast easy
+to terminate when Critical Error
+- Fix bug in check and compare version process
+- Add Feature to remove FilePath from MovieProfile by set "" to FilePath
+- Add Feature to update CurrentFilePath with Existing MovieProfile
+- Disable Save Command when Detect Existing in MovieDB
+
+==============================================================================
+Version 13.07.23.1936
+==============================================================================
+- Fix bug crash when start and read MovieProfile from empty file in folder MDB
+- Add Feature to import MovieProfile from folder that have file with complete
+movie profile info in file name
+
+==============================================================================
+Version 13.06.28.1635
+==============================================================================
+- Correct Bug when close program and thread peer to peer is still running
+
+==============================================================================
+Version 13.06.28.1413
+==============================================================================
+- Correct issue when MovieStat is loading and ready, Focus topic on General
+- Add UPD Peer To Peer function "NotifyPeerProfile"
+
+==============================================================================
+Version 13.06.27.0109
+==============================================================================
+- Add feature to prepare folder for store IMG include FrontCover, BackCover,
+ScreenShot1, ScreenShot2
+- Add feature can resize MovieProfile widdows and keep aspect-ratio of control
+- Add feature can Set/Import Movie image file (FrontCover/BackCover/SS1/SS2)
+
+==============================================================================
+Version 13.06.26.1235
+==============================================================================
+- Add Feature to clear log file in folder ".\LOGs\" that older than 3 days
+- Fix startup display freeze cause from load movie profile DB
+- Fix menu can call while it not ready
+- Add Feature P2P message for Discovery and Comminute with friend in same
+switch/access-point
+- Fix buf when sort by click column in windows movie stat
+- Add Feature check already running instant by use UDP bind local port 6970
+
+==============================================================================
+Version 13.06.23.2003
+==============================================================================
+- Add option to auto build clip when import
+- Add Function MoveStat that can click from toolsbar. To represent current
+movie profile statistic
+- Fix a little bug to add suggess word to select list if user forget add
+
+==============================================================================
+Version 13.06.23.0817
+==============================================================================
+- Remove button "exit program" from toolbar for practical using
+- Add feature shortcut function key to from select&add list of Actress/Tags
+
+==============================================================================
+Version 13.06.22.1732
+==============================================================================
+- Add search link on form MovieProfile field "code", once you enter code link
+to search with google will appear. When click link will open default browser
+and search google whit that code
+- Add CountPlaying counter, when you save MovieProfile to your Collection and
+then you come back to this movie again and play, it will increase counter.
+- Add feature save Movie-Filter, when key Find condition then you can also
+save config as filter template. You can named it with maximum 32 char, and 
+please use english as possible. When you save it will appear at toolbar filter
+as the dropdownlist for fastest acess.
+
+==============================================================================
+Version 13.06.22.1108
+==============================================================================
+- Change Sortable in list of SearchBox (Actress/Tag/Country)
+- Add feature Suggestion when press Arrow-Up/Arrow-Down in textbox of form
+add select item (Acteress/Tags)
+
+==============================================================================
+Version 13.06.22.0938
+==============================================================================
+- Add menu Help->About for display credit and information
+
+==============================================================================
+Version 13.06.22.0847
+==============================================================================
+- Correct bug when filter and click checkbox no title, code, story and ...
+- MovieList now can sort when click that column header, and sure you can click
+many time if you want :P
+- Add Auto-Update feature that will check new version and automatic download
+new version and lunch script to updated. The Auto-Update will check once per
+hour, if you run/start program in save hour the auto-check will ignore. But
+you can do Force Manual Check Update by click menu Help->Check Update.
+
+
+
+
+=======================================
+No Animal were harm in this Production!
+

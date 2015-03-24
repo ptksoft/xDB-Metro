@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3208A73-F9DD-4E50-A07A-F0EA02EEEDBD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xDB2013</RootNamespace>
+    <AssemblyName>xDB2013</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Data_Dataset.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\@Library.C#\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PTKSOFT.Network2">
+      <HintPath>..\..\@Library.C#\DLL\PTKSOFT.Network2.dll</HintPath>
+    </Reference>
+    <Reference Include="PTKSOFT.Utils2, Version=12.9.28.53, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\@Library.C#\DLL\PTKSOFT.Utils2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZiCure.Log, Version=13.3.26.1249, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\@Library.C#\DLL\ZiCure.Log.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FRM.cs" />
+    <Compile Include="frmCheckAndUpdateProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckAndUpdateProgram.Designer.cs">
+      <DependentUpon>frmCheckAndUpdateProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageFilter.Designer.cs">
+      <DependentUpon>frmManageFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovieProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovieProfile.Designer.cs">
+      <DependentUpon>frmMovieProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovieStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovieStat.Designer.cs">
+      <DependentUpon>frmMovieStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNetworkPeerToPeer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNetworkPeerToPeer.Designer.cs">
+      <DependentUpon>frmNetworkPeerToPeer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectOrAddList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectOrAddList.Designer.cs">
+      <DependentUpon>frmSelectOrAddList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KW.cs" />
+    <Compile Include="MovieDB.cs" />
+    <Compile Include="MovieFilter.cs" />
+    <Compile Include="MovieProfile.cs" />
+    <Compile Include="P2P.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ptkJRPC.cs" />
+    <Compile Include="that.cs" />
+    <Compile Include="ucMovieList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMovieList.Designer.cs">
+      <DependentUpon>ucMovieList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCheckAndUpdateProgram.resx">
+      <DependentUpon>frmCheckAndUpdateProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageFilter.resx">
+      <DependentUpon>frmManageFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovieProfile.resx">
+      <DependentUpon>frmMovieProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovieStat.resx">
+      <DependentUpon>frmMovieStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNetworkPeerToPeer.resx">
+      <DependentUpon>frmNetworkPeerToPeer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectOrAddList.resx">
+      <DependentUpon>frmSelectOrAddList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ucMovieList.resx">
+      <DependentUpon>ucMovieList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data_Dataset.ico" />
+    <Content Include="ReadGu.TXT">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
