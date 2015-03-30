@@ -15,6 +15,11 @@ For Twins Child Support please mail to: ptksoft@gmail.com			:P
 What is new?
 
 ==============================================================================
+Version 15.03.30.2348
+==============================================================================
+- Apply OpenFileDialog Filter when select Cover/ScreenShot file
+
+==============================================================================
 Version 15.03.21.2108
 ==============================================================================
 - Revise feature to Add&Replace file path when import from directory menu

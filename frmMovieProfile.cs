@@ -720,6 +720,7 @@ namespace xDB2013
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.CheckFileExists = true;
+            openFile.Filter = "Image File (*.jpg, *.jpeg)|*.jpg;*.jpeg";
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 if (MovieDB.SaveMovieImage_FrontCover(openFile.FileName, this.param_MovieProfile))
@@ -733,6 +734,7 @@ namespace xDB2013
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.CheckFileExists = true;
+            openFile.Filter = "Image File (*.jpg, *.jpeg)|*.jpg;*.jpeg";
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 if (MovieDB.SaveMovieImage_BackCover(openFile.FileName, this.param_MovieProfile))
@@ -746,6 +748,7 @@ namespace xDB2013
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.CheckFileExists = true;
+            openFile.Filter = "Image File (*.jpg, *.jpeg)|*.jpg;*.jpeg";
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 if (MovieDB.SaveMovieImage_ScreenShot1(openFile.FileName, this.param_MovieProfile))
@@ -759,6 +762,7 @@ namespace xDB2013
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.CheckFileExists = true;
+            openFile.Filter = "Image File (*.jpg, *.jpeg)|*.jpg;*.jpeg";
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 if (MovieDB.SaveMovieImage_ScreenShot2(openFile.FileName, this.param_MovieProfile))
