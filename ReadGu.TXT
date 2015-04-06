@@ -15,6 +15,13 @@ For Twins Child Support please mail to: ptksoft@gmail.com			:P
 What is new?
 
 ==============================================================================
+Version 15.04.06.2124
+==============================================================================
+- Add command "Batch" -> "Delete Last File Path !!!" for mass delete filepath
+from movie profiles in case of lost HardDisk !!! T____T and make profile to
+be "Global Profile"
+
+==============================================================================
 Version 15.03.30.2348
 ==============================================================================
 - Apply OpenFileDialog Filter when select Cover/ScreenShot file

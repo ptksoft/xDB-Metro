@@ -380,5 +380,61 @@ namespace xDB2013
                 frm.Show();
             }
         }
+
+        public static void BatchDeleteLastFilePathInCurrentTab(TabPage tabToDelete)
+        {
+            ucMovieList movieList = null;
+            foreach (Control ctl in tabToDelete.Controls)
+                if (ctl is ucMovieList)
+                {
+                    movieList = (ucMovieList)ctl;
+                    break;
+                }
+            if (movieList == null) return;
+
+            // Begin Delete Last File Path
+            List<MovieProfile> listMovie = movieList.GetListMovie();
+            if (listMovie.Count > 0)
+                if (MessageBox.Show(
+                        "Are you sure to delete " + listMovie.Count.ToString() + " movie File Path!!",
+                        " Confirm?", MessageBoxButtons.OKCancel
+                    ) != DialogResult.OK ) return;
+
+            // After Confirm Begin Real Delete
+            int countSuccess = 0;
+            for (int i = 0; i < listMovie.Count; i++)
+            {
+                MovieProfile profile = (MovieProfile)listMovie[i];
+
+                //--------------------------------------------------
+                string filePath2Delete = profile.FilePath;
+                if (File.Exists(filePath2Delete))
+                {
+                    try
+                    {
+                        File.Delete(filePath2Delete);
+                        that.DebugAndLog("Delete RealFileInDisk [" + filePath2Delete + "] Success");
+                    }
+                    catch (Exception ex)
+                    {
+                        that.DebugAndLog("Error in delete RealFileInDisk [" + filePath2Delete + "] " + ex.Message);
+                    }
+                }
+                profile.FilePath = "";      // Delete from Object
+                profile.CheckFileConnect();
+                //--------------------------------------------------
+
+                if (!MovieDB.SaveMovieProfile(profile))
+                {
+                    that.DebugAndLog("Error in MovieDB.SaveMovieProfile() ... Cannot Remove Last FilePath");
+                }
+                else
+                {
+                    that.DebugAndLog("Delete last File path from Movie{" + profile.Hash + "} Success");
+                    countSuccess++;
+                }
+            }
+            MessageBox.Show("Success delete " + countSuccess.ToString() + " LastFile Path from " + listMovie.Count.ToString() + " profile");
+        }
     }
 }

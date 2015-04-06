@@ -432,5 +432,15 @@ namespace xDB2013
             that.ShowWin_ParseProfileFromDirectory(dir2open.SelectedPath);            
         }
 
+        private void menuBatchDeleteLastFilePath_Click(object sender, EventArgs e)
+        {
+            if (this.tabMain.SelectedTab == null)
+            {
+                MessageBox.Show("Please select any MovieList TAB");
+                return;
+            }
+            that.BatchDeleteLastFilePathInCurrentTab(this.tabMain.SelectedTab);
+        }
+
     }
 }

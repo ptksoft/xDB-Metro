@@ -42,6 +42,8 @@
             this.menuProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProfileImport = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProfileImportParseFromFileInDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBatch = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBatchDeleteLastFilePath = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOption = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOptionAutoBuildHash = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOptionDeleteSourcePicture = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,21 +71,21 @@
             this.toolImportMovie = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolAllFiles = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolFilter = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolSearch = new System.Windows.Forms.ToolStripButton();
             this.toolExitProgram = new System.Windows.Forms.ToolStripButton();
             this.toolCloseTab = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStat = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolPeer2Peer = new System.Windows.Forms.ToolStripButton();
             this.iml32x32 = new System.Windows.Forms.ImageList(this.components);
             this.tabMain = new System.Windows.Forms.TabControl();
             this.lstDebug = new System.Windows.Forms.ListBox();
             this.tmrDebug = new System.Windows.Forms.Timer(this.components);
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.menuMain.SuspendLayout();
             this.mainToolBar.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +96,7 @@
             this.menuFile,
             this.menuMovie,
             this.menuProfile,
+            this.mnuBatch,
             this.menuOption,
             this.menuNetwork,
             this.menuTab,
@@ -194,6 +197,21 @@
             this.menuProfileImportParseFromFileInDir.Size = new System.Drawing.Size(230, 22);
             this.menuProfileImportParseFromFileInDir.Text = "Parse from FILE in directory ...";
             this.menuProfileImportParseFromFileInDir.Click += new System.EventHandler(this.menuProfileImportParseFromFileInDir_Click);
+            // 
+            // mnuBatch
+            // 
+            this.mnuBatch.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuBatchDeleteLastFilePath});
+            this.mnuBatch.Name = "mnuBatch";
+            this.mnuBatch.Size = new System.Drawing.Size(49, 19);
+            this.mnuBatch.Text = "&Batch";
+            // 
+            // menuBatchDeleteLastFilePath
+            // 
+            this.menuBatchDeleteLastFilePath.Name = "menuBatchDeleteLastFilePath";
+            this.menuBatchDeleteLastFilePath.Size = new System.Drawing.Size(188, 22);
+            this.menuBatchDeleteLastFilePath.Text = "Delete Last File Path !!";
+            this.menuBatchDeleteLastFilePath.Click += new System.EventHandler(this.menuBatchDeleteLastFilePath_Click);
             // 
             // menuOption
             // 
@@ -463,6 +481,11 @@
             this.toolAllFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolAllFiles.Click += new System.EventHandler(this.toolAllFiles_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 65);
+            // 
             // toolFilter
             // 
             this.toolFilter.Image = ((System.Drawing.Image)(resources.GetObject("toolFilter.Image")));
@@ -471,6 +494,11 @@
             this.toolFilter.Size = new System.Drawing.Size(65, 62);
             this.toolFilter.Text = "Filters";
             this.toolFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 65);
             // 
             // toolSearch
             // 
@@ -527,6 +555,11 @@
             this.toolStat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStat.Click += new System.EventHandler(this.toolStat_Click);
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 65);
+            // 
             // toolPeer2Peer
             // 
             this.toolPeer2Peer.Image = ((System.Drawing.Image)(resources.GetObject("toolPeer2Peer.Image")));
@@ -574,21 +607,6 @@
             this.tmrDebug.Enabled = true;
             this.tmrDebug.Interval = 200;
             this.tmrDebug.Tick += new System.EventHandler(this.tmrDebug_Tick);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 65);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 65);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 65);
             // 
             // frmMain
             // 
@@ -676,6 +694,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem mnuBatch;
+        private System.Windows.Forms.ToolStripMenuItem menuBatchDeleteLastFilePath;
     }
 }
 

@@ -24,6 +24,13 @@ namespace xDB2013
             InitializeComponent();            
             TheList.ListViewItemSorter = lvwColumnSorter;
         }
+        public List<MovieProfile> GetListMovie()
+        {
+            List<MovieProfile> listMovie = new List<MovieProfile>();
+            for (int i = 0; i < TheList.Items.Count; i++)
+                listMovie.Add((MovieProfile)TheList.Items[i].Tag);
+            return (listMovie);
+        }
         public void RefreshMovieList(List<MovieProfile> listMovie, string descMovie)
         {
             TheList.BeginUpdate();
