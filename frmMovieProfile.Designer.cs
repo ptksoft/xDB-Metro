@@ -43,7 +43,6 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblPlay = new System.Windows.Forms.Label();
             this.lblBuildHash = new System.Windows.Forms.Label();
-            this.lstTag = new System.Windows.Forms.ListBox();
             this.lstActress = new System.Windows.Forms.ListBox();
             this.txtStory = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pgbBuildHash = new System.Windows.Forms.ProgressBar();
+            this.lstTag = new System.Windows.Forms.ListBox();
             this.tabAdvanced = new System.Windows.Forms.TabPage();
             this.btnAddScreenShot2 = new System.Windows.Forms.Button();
             this.btnAddScreenShot1 = new System.Windows.Forms.Button();
@@ -111,7 +111,7 @@
             this.tabMain.Controls.Add(this.tabScreenShot2);
             this.tabMain.Controls.Add(this.tabFoundDuplicate);
             this.tabMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.tabMain.ItemSize = new System.Drawing.Size(100, 50);
+            this.tabMain.ItemSize = new System.Drawing.Size(100, 80);
             this.tabMain.Location = new System.Drawing.Point(15, 12);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -155,7 +155,7 @@
             this.tabProfile.Location = new System.Drawing.Point(4, 4);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfile.Size = new System.Drawing.Size(795, 488);
+            this.tabProfile.Size = new System.Drawing.Size(795, 458);
             this.tabProfile.TabIndex = 0;
             this.tabProfile.Text = "   Profile  ";
             this.tabProfile.UseVisualStyleBackColor = true;
@@ -167,7 +167,7 @@
             this.lblAdvanceTab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAdvanceTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lblAdvanceTab.ForeColor = System.Drawing.Color.Green;
-            this.lblAdvanceTab.Location = new System.Drawing.Point(609, 440);
+            this.lblAdvanceTab.Location = new System.Drawing.Point(609, 410);
             this.lblAdvanceTab.Name = "lblAdvanceTab";
             this.lblAdvanceTab.Size = new System.Drawing.Size(161, 24);
             this.lblAdvanceTab.TabIndex = 34;
@@ -179,7 +179,7 @@
             // 
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(18, 403);
+            this.label17.Location = new System.Drawing.Point(18, 373);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 24);
             this.label17.TabIndex = 33;
@@ -191,7 +191,7 @@
             this.txtHash.BackColor = System.Drawing.SystemColors.Control;
             this.txtHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtHash.ForeColor = System.Drawing.Color.DimGray;
-            this.txtHash.Location = new System.Drawing.Point(92, 365);
+            this.txtHash.Location = new System.Drawing.Point(92, 335);
             this.txtHash.Name = "txtHash";
             this.txtHash.ReadOnly = true;
             this.txtHash.Size = new System.Drawing.Size(246, 22);
@@ -220,7 +220,7 @@
             this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label16.ForeColor = System.Drawing.Color.Silver;
-            this.label16.Location = new System.Drawing.Point(204, 405);
+            this.label16.Location = new System.Drawing.Point(204, 375);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(34, 16);
             this.label16.TabIndex = 30;
@@ -234,7 +234,7 @@
             this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label15.ForeColor = System.Drawing.Color.Silver;
-            this.label15.Location = new System.Drawing.Point(736, 374);
+            this.label15.Location = new System.Drawing.Point(736, 344);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(34, 16);
             this.label15.TabIndex = 29;
@@ -260,7 +260,7 @@
             this.lblCountPlay.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblCountPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lblCountPlay.ForeColor = System.Drawing.Color.DimGray;
-            this.lblCountPlay.Location = new System.Drawing.Point(92, 395);
+            this.lblCountPlay.Location = new System.Drawing.Point(92, 365);
             this.lblCountPlay.Name = "lblCountPlay";
             this.lblCountPlay.Size = new System.Drawing.Size(65, 36);
             this.lblCountPlay.TabIndex = 25;
@@ -288,7 +288,7 @@
             this.lblPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lblPlay.ForeColor = System.Drawing.Color.Green;
-            this.lblPlay.Location = new System.Drawing.Point(169, 405);
+            this.lblPlay.Location = new System.Drawing.Point(169, 375);
             this.lblPlay.Name = "lblPlay";
             this.lblPlay.Size = new System.Drawing.Size(35, 16);
             this.lblPlay.TabIndex = 21;
@@ -303,35 +303,13 @@
             this.lblBuildHash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBuildHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lblBuildHash.ForeColor = System.Drawing.Color.Green;
-            this.lblBuildHash.Location = new System.Drawing.Point(347, 368);
+            this.lblBuildHash.Location = new System.Drawing.Point(347, 338);
             this.lblBuildHash.Name = "lblBuildHash";
             this.lblBuildHash.Size = new System.Drawing.Size(73, 16);
             this.lblBuildHash.TabIndex = 17;
             this.lblBuildHash.Text = "Build Hash";
             this.lblBuildHash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblBuildHash.Click += new System.EventHandler(this.lblBuildHash_Click);
-            // 
-            // lstTag
-            // 
-            this.lstTag.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstTag.BackColor = System.Drawing.SystemColors.Control;
-            this.lstTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lstTag.ForeColor = System.Drawing.Color.Navy;
-            this.lstTag.FormattingEnabled = true;
-            this.lstTag.ItemHeight = 24;
-            this.lstTag.Items.AddRange(new object[] {
-            "rape",
-            "lover",
-            "incest",
-            "hidden",
-            "clip"});
-            this.lstTag.Location = new System.Drawing.Point(638, 198);
-            this.lstTag.Name = "lstTag";
-            this.lstTag.ScrollAlwaysVisible = true;
-            this.lstTag.Size = new System.Drawing.Size(132, 172);
-            this.lstTag.TabIndex = 7;
-            this.lstTag.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lstTag_KeyUp);
             // 
             // lstActress
             // 
@@ -363,7 +341,7 @@
             this.txtStory.Multiline = true;
             this.txtStory.Name = "txtStory";
             this.txtStory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtStory.Size = new System.Drawing.Size(506, 189);
+            this.txtStory.Size = new System.Drawing.Size(506, 159);
             this.txtStory.TabIndex = 6;
             this.txtStory.Text = "เนื้อเรื่องมันมีอยู่ว่า\r\nเมื่อนานมาแล้ว  นะครับ\r\n\r\n";
             this.txtStory.TextChanged += new System.EventHandler(this.txtStory_TextChanged);
@@ -464,7 +442,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Purple;
-            this.label12.Location = new System.Drawing.Point(18, 366);
+            this.label12.Location = new System.Drawing.Point(18, 336);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(54, 24);
             this.label12.TabIndex = 4;
@@ -486,7 +464,7 @@
             this.lblAddTag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAddTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lblAddTag.ForeColor = System.Drawing.Color.Green;
-            this.lblAddTag.Location = new System.Drawing.Point(705, 373);
+            this.lblAddTag.Location = new System.Drawing.Point(705, 343);
             this.lblAddTag.Name = "lblAddTag";
             this.lblAddTag.Size = new System.Drawing.Size(33, 16);
             this.lblAddTag.TabIndex = 4;
@@ -560,11 +538,33 @@
             // 
             this.pgbBuildHash.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.pgbBuildHash.Location = new System.Drawing.Point(92, 367);
+            this.pgbBuildHash.Location = new System.Drawing.Point(92, 337);
             this.pgbBuildHash.Name = "pgbBuildHash";
             this.pgbBuildHash.Size = new System.Drawing.Size(504, 18);
             this.pgbBuildHash.TabIndex = 20;
             this.pgbBuildHash.Visible = false;
+            // 
+            // lstTag
+            // 
+            this.lstTag.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstTag.BackColor = System.Drawing.SystemColors.Control;
+            this.lstTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lstTag.ForeColor = System.Drawing.Color.Navy;
+            this.lstTag.FormattingEnabled = true;
+            this.lstTag.ItemHeight = 24;
+            this.lstTag.Items.AddRange(new object[] {
+            "rape",
+            "lover",
+            "incest",
+            "hidden",
+            "clip"});
+            this.lstTag.Location = new System.Drawing.Point(638, 198);
+            this.lstTag.Name = "lstTag";
+            this.lstTag.ScrollAlwaysVisible = true;
+            this.lstTag.Size = new System.Drawing.Size(132, 124);
+            this.lstTag.TabIndex = 7;
+            this.lstTag.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lstTag_KeyUp);
             // 
             // tabAdvanced
             // 
@@ -888,7 +888,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(837, 662);
             this.Controls.Add(this.btnSave);

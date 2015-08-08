@@ -465,18 +465,24 @@ namespace xDB2013
             string[] partRating = Name2Parse.Split(new string[] { "+" }, StringSplitOptions.None);
             if (partRating.Length == 2)
             {
-                try { _Rating = int.Parse(partRating[1].Substring(0, 1)); }
-                catch { }
-                if (_Rating > 5) _Rating = 5;
-                if (_Rating < 0) _Rating = 0;
+                if (partRating[1].Length > 1)
+                {
+                    try { _Rating = int.Parse(partRating[1].Substring(0, 1)); }
+                    catch { }
+                    if (_Rating > 5) _Rating = 5;
+                    if (_Rating < 0) _Rating = 0;
+                }
             }
 
             // Type "!"
             string[] partType = Name2Parse.Split(new string[] { "!" }, StringSplitOptions.None);
             if (partType.Length == 2)
             {
-                string charType = partType[1].Substring(0, 1).ToUpper();
-                if (MovieProfile.ListType.Contains(charType)) _Type = charType;
+                if (partType[1].Length > 0)
+                {
+                    string charType = partType[1].Substring(0, 1).ToUpper();
+                    if (MovieProfile.ListType.Contains(charType)) _Type = charType;
+                }
             }
 
             // Code "(..)"
