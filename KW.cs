@@ -40,6 +40,8 @@ namespace xDB2013
         public const string DeleteSourcePicture = "DELETE_SOURCE_PICTURE";
         public const string AllowEditOfflineProfile = "ALLOW_EDIT_OFFLINE_PROFILE";
 
+        public const string OtherImgPath = "OTHER_IMG_PATH";
+
         /* --- Peer To Peer Constant ------------------------------------------*/
         public const string JsonRpc = "jsonrpc";
         public const string RpcVersion20 = "2.0";

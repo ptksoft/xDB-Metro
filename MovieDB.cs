@@ -301,10 +301,15 @@ namespace xDB2013
         }
         private static string _GetMovieImageFile_If_Exists(string typeImage, MovieProfile profile)
         {
+            string path2Img = ImgPath;      // default path
+            if (that.Config[KW.OtherImgPath].Length > 0) 
+                    path2Img = that.Config[KW.OtherImgPath];
+
             string pathOnly =
-                ImgPath + Path.DirectorySeparatorChar
+                path2Img + Path.DirectorySeparatorChar
                 + typeImage + Path.DirectorySeparatorChar
                 + profile.Hash.Substring(0, 1);
+
             string[] fileList = Directory.GetFiles(pathOnly, profile.Hash + ".*");
             if (fileList.Length < 1) return ("");
             return (fileList[0]);
