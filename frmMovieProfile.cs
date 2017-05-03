@@ -227,6 +227,7 @@ namespace xDB2013
             btnAddScreenShot2.Enabled = false;
             btnSave.Enabled = false;
             btnClose.Enabled = false;
+            chkAutoSaveAfterBuildHash.Visible = true;
             
             pgbBuildHash.Visible = true;
             
@@ -300,6 +301,19 @@ namespace xDB2013
             this.Refresh();
 
             _CheckExisting_MovieDB();   // Check If Already Existing
+            
+            // check if user checked auto-save check-box?
+            if (
+				chkAutoSaveAfterBuildHash.Checked
+				&& btnSave.Visible 
+				&& btnSave.Enabled) 
+			{
+				btnSave_Click(this, new EventArgs());
+			}
+			else
+			{
+				chkAutoSaveAfterBuildHash.Visible = false;
+			}
         }
         private void _CheckExisting_MovieDB()
         {

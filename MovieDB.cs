@@ -141,7 +141,9 @@ namespace xDB2013
             for (int i = 0; i < listFile.Length; i++)
             {
                 zLog.Write("Process File[" + listFile[i] + "]");
-                if (!__ReadFileDataToMovieProfile(listFile[i])) return (false);
+                if (!__ReadFileDataToMovieProfile(listFile[i])) {
+					zLog.WriteError("Error FileData: " + listFile[i]);					
+				}
             }
 
             // Everything OK
@@ -483,8 +485,8 @@ namespace xDB2013
                     {
                         isFound = false;
                         for (int k = 0; k < keywords.Length; k++)
-                        {
-                            if (curList[i].Actress.Contains(keywords[k]))
+                        {							
+                            if (curList[i].FoundActress(keywords[k]))
                             {
                                 isFound = true;
                                 break;

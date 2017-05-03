@@ -300,6 +300,24 @@ namespace xDB2013
             if (!MovieProfile.ListActress.Contains(newActress)) 
                 MovieProfile.ListActress.Add(newActress);
         }
+        public bool FoundActress(string NameToSearch) {
+			// prepare list of name to search
+			List<string> L2S = new List<string>(NameToSearch.Trim().Split(new string[] {" "}, StringSplitOptions.RemoveEmptyEntries));
+			if (L2S.Count < 1) return(false);			
+			foreach (string a in _Actress) {
+				string[] a2 = a.Split(new string[] {" "}, StringSplitOptions.RemoveEmptyEntries);
+				if (a2.Length < 1) continue;
+				bool isMatch = true;
+				foreach (string a1 in a2) {
+					if (! L2S.Contains(a1)) {
+						isMatch = false;
+						break;
+					}
+				}
+				if (isMatch) return(true);
+			}
+			return(false);
+        }
         public void AddTag(string Tag)
         {
             string newTag = this._RemoveInvalidChar(Tag.Trim().ToLower());

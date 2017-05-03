@@ -15,6 +15,13 @@ For Twins Child Support please mail to: ptksoft@gmail.com			:P
 What is new?
 
 ==============================================================================
+Version 17.05.02.2030
+==============================================================================
+- Continue load file-data when some file is corrupt
+- Search Actress Name have ability to reverse name part searching
+- Add feature auto-save when finish build hash
+
+==============================================================================
 Version 16.02.01.2341
 ==============================================================================
 - Add ability to config other image path, rather than default path
