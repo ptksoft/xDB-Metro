@@ -32,6 +32,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMovieProfile));
 			this.tabMain = new System.Windows.Forms.TabControl();
 			this.tabProfile = new System.Windows.Forms.TabPage();
+			this.chkAutoSaveAfterBuildHash = new System.Windows.Forms.CheckBox();
 			this.lblAdvanceTab = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
 			this.txtHash = new System.Windows.Forms.TextBox();
@@ -91,7 +92,6 @@
 			this.btnClose = new System.Windows.Forms.Button();
 			this.tmrBuildHash = new System.Windows.Forms.Timer(this.components);
 			this.bgWorking = new System.ComponentModel.BackgroundWorker();
-			this.chkAutoSaveAfterBuildHash = new System.Windows.Forms.CheckBox();
 			this.tabMain.SuspendLayout();
 			this.tabProfile.SuspendLayout();
 			this.tabAdvanced.SuspendLayout();
@@ -161,6 +161,18 @@
 			this.tabProfile.TabIndex = 0;
 			this.tabProfile.Text = "   Profile  ";
 			this.tabProfile.UseVisualStyleBackColor = true;
+			// 
+			// chkAutoSaveAfterBuildHash
+			// 
+			this.chkAutoSaveAfterBuildHash.AutoSize = true;
+			this.chkAutoSaveAfterBuildHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+			this.chkAutoSaveAfterBuildHash.Location = new System.Drawing.Point(335, 375);
+			this.chkAutoSaveAfterBuildHash.Name = "chkAutoSaveAfterBuildHash";
+			this.chkAutoSaveAfterBuildHash.Size = new System.Drawing.Size(261, 24);
+			this.chkAutoSaveAfterBuildHash.TabIndex = 35;
+			this.chkAutoSaveAfterBuildHash.Text = "Auto Save after finish Build Hash";
+			this.chkAutoSaveAfterBuildHash.UseVisualStyleBackColor = true;
+			this.chkAutoSaveAfterBuildHash.Visible = false;
 			// 
 			// lblAdvanceTab
 			// 
@@ -886,18 +898,6 @@
 			// 
 			this.bgWorking.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorking_DoWork);
 			// 
-			// chkAutoSaveAfterBuildHash
-			// 
-			this.chkAutoSaveAfterBuildHash.AutoSize = true;
-			this.chkAutoSaveAfterBuildHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-			this.chkAutoSaveAfterBuildHash.Location = new System.Drawing.Point(335, 375);
-			this.chkAutoSaveAfterBuildHash.Name = "chkAutoSaveAfterBuildHash";
-			this.chkAutoSaveAfterBuildHash.Size = new System.Drawing.Size(261, 24);
-			this.chkAutoSaveAfterBuildHash.TabIndex = 35;
-			this.chkAutoSaveAfterBuildHash.Text = "Auto Save after finish Build Hash";
-			this.chkAutoSaveAfterBuildHash.UseVisualStyleBackColor = true;
-			this.chkAutoSaveAfterBuildHash.Visible = false;
-			// 
 			// frmMovieProfile
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -918,9 +918,8 @@
 			this.Load += new System.EventHandler(this.frmMovieProfile_Load);
 			this.Shown += new System.EventHandler(this.frmMovieProfile_Shown);
 			this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmMovieProfile_KeyUp);
-			this.Move += new System.EventHandler(this.frmMovieProfile_Move);
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMovieProfile_FormClosing);
-			this.Resize += new System.EventHandler(this.frmMovieProfile_Resize);
+			this.ResizeEnd += new System.EventHandler(this.frmMovieProfile_ResizeEnd);
 			this.tabMain.ResumeLayout(false);
 			this.tabProfile.ResumeLayout(false);
 			this.tabProfile.PerformLayout();

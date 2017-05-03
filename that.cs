@@ -366,18 +366,31 @@ namespace xDB2013
 
         public static void movieList_OnKeyUpMovieList(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) movieList_OnDoubleClickMovieList(sender, new EventArgs());
+			ListView lv = (ListView)sender;
+			if (lv.SelectedItems.Count < 1) return;
+			
+			if (e.KeyCode == Keys.Enter) {
+				if (e.Shift) {
+					MovieProfile mProfile = (MovieProfile)lv.SelectedItems[0].Tag;
+					frmMovieProfile frm = new frmMovieProfile();
+					frm.param_MovieProfile = mProfile;
+					frm.param_MovieList = (ucMovieList)lv.Parent;
+					frm.Show();								
+				}
+				else {
+					movieList_OnDoubleClickMovieList(sender, new EventArgs());
+				}
+			}
         }
         public static void movieList_OnDoubleClickMovieList(object sender, EventArgs s)
         {
             ListView lv = (ListView)sender;
             if (lv.SelectedItems.Count > 0)
             {
-                MovieProfile mProfile = (MovieProfile)lv.SelectedItems[0].Tag;
-                frmMovieProfile frm = new frmMovieProfile();
-                frm.param_MovieProfile = mProfile;
-                frm.param_MovieList = (ucMovieList)lv.Parent;
-                frm.Show();
+				MovieProfile mProfile = (MovieProfile)lv.SelectedItems[0].Tag;
+				frmProfileViewer frm = new frmProfileViewer();
+				frm.param_MovieProfile = mProfile;
+				frm.Show();                
             }
         }
 

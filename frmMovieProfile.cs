@@ -82,24 +82,15 @@ namespace xDB2013
 
             this.isEnableSavePosition = true;   // Enable Save MovePosition Of Windows
         }
-        private void frmMovieProfile_Move(object sender, EventArgs e)
-        {
-            if (this == null) return;
-            if (!this.Visible) return;
-            if (!this.Enabled) return;
-            if (this.WindowState != FormWindowState.Normal) return;
+		private void frmMovieProfile_ResizeEnd(object sender, EventArgs e)
+		{
+			if (this == null) return;
+			if (!this.Visible) return;
+			if (!this.Enabled) return;
+			if (this.WindowState != FormWindowState.Normal) return;
 
-            _Do_SavePositionOfProfileWindows();
-        }
-        private void frmMovieProfile_Resize(object sender, EventArgs e)
-        {
-            if (this == null) return;
-            if (!this.Visible) return;
-            if (!this.Enabled) return;
-            if (this.WindowState != FormWindowState.Normal) return;
-
-            _Do_SavePositionOfProfileWindows();
-        }        
+			_Do_SavePositionOfProfileWindows();
+		}        
 
         private void refreshDataFromParam()
         {
@@ -977,6 +968,6 @@ namespace xDB2013
 
             btnSave.Enabled = true;
         }
-                
+		                
     }
 }

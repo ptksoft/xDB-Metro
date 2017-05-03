@@ -24,6 +24,11 @@ namespace xDB2013
         public const string ProfileTop = "PROFILE_TOP";
         public const string ProfileLeft = "PROFILE_LEFT";
 
+		public const string ViewerWidth = "VIEWER_WIDTH";
+		public const string ViewerHeight = "VIEWER_HEIGHT";
+		public const string ViewerTop = "VIEWER_TOP";
+		public const string ViewerLeft = "VIEWER_LEFT";        
+
         public const string WinSelectWidth = "WIN_SELECT_WIDTH";
         public const string WinSelectHeight = "WIN_SELECT_HEIGHT";
 

@@ -121,6 +121,12 @@
     <Compile Include="frmNetworkPeerToPeer.Designer.cs">
       <DependentUpon>frmNetworkPeerToPeer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProfileViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfileViewer.Designer.cs">
+      <DependentUpon>frmProfileViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNetworkPeerToPeer.resx">
       <DependentUpon>frmNetworkPeerToPeer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfileViewer.resx">
+      <DependentUpon>frmProfileViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearch.resx">
       <DependentUpon>frmSearch.cs</DependentUpon>
