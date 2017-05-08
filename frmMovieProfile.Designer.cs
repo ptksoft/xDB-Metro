@@ -92,6 +92,8 @@
 			this.btnClose = new System.Windows.Forms.Button();
 			this.tmrBuildHash = new System.Windows.Forms.Timer(this.components);
 			this.bgWorking = new System.ComponentModel.BackgroundWorker();
+			this.lblOneJav = new System.Windows.Forms.Label();
+			this.label20 = new System.Windows.Forms.Label();
 			this.tabMain.SuspendLayout();
 			this.tabProfile.SuspendLayout();
 			this.tabAdvanced.SuspendLayout();
@@ -122,6 +124,8 @@
 			// tabProfile
 			// 
 			this.tabProfile.BackColor = System.Drawing.Color.Transparent;
+			this.tabProfile.Controls.Add(this.label20);
+			this.tabProfile.Controls.Add(this.lblOneJav);
 			this.tabProfile.Controls.Add(this.chkAutoSaveAfterBuildHash);
 			this.tabProfile.Controls.Add(this.lblAdvanceTab);
 			this.tabProfile.Controls.Add(this.label17);
@@ -898,6 +902,33 @@
 			// 
 			this.bgWorking.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorking_DoWork);
 			// 
+			// lblOneJav
+			// 
+			this.lblOneJav.AutoSize = true;
+			this.lblOneJav.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.lblOneJav.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+			this.lblOneJav.ForeColor = System.Drawing.Color.Green;
+			this.lblOneJav.Location = new System.Drawing.Point(388, 146);
+			this.lblOneJav.Name = "lblOneJav";
+			this.lblOneJav.Size = new System.Drawing.Size(84, 16);
+			this.lblOneJav.TabIndex = 36;
+			this.lblOneJav.Text = "OneJav.com";
+			this.lblOneJav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblOneJav.Click += new System.EventHandler(this.lblOneJav_Click);
+			// 
+			// label20
+			// 
+			this.label20.AutoSize = true;
+			this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+			this.label20.ForeColor = System.Drawing.Color.Silver;
+			this.label20.Location = new System.Drawing.Point(478, 146);
+			this.label20.Name = "label20";
+			this.label20.Size = new System.Drawing.Size(34, 16);
+			this.label20.TabIndex = 37;
+			this.label20.Text = "- F2";
+			this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// frmMovieProfile
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -995,5 +1026,7 @@
         private System.Windows.Forms.Button btnAddBackCover;
         private System.Windows.Forms.Button btnAddFrontCover;
 		private System.Windows.Forms.CheckBox chkAutoSaveAfterBuildHash;
+		private System.Windows.Forms.Label lblOneJav;
+		private System.Windows.Forms.Label label20;
     }
 }

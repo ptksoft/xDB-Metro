@@ -17,6 +17,8 @@ namespace xDB2013
 	public partial class frmProfileViewer : Form
 	{
 		public MovieProfile param_MovieProfile = null;
+		public ucMovieList param_MovieList = null;
+		
 		private bool isEnableSavePosition = true;
 		
 		public frmProfileViewer()
@@ -78,6 +80,9 @@ namespace xDB2013
 				+ ") Hash={"
 				+ param_MovieProfile.Hash + "}");
 			
+			btnPrevious.Visible = (null != param_MovieList);
+			btnNext.Visible = (null != param_MovieList);
+			
 			refreshDataFromParam();
 			RefreshTabMovieImage(0);
 		}
@@ -87,9 +92,14 @@ namespace xDB2013
 			if (param_MovieProfile == null) return;
 			
 			this.Text = 
-				param_MovieProfile.Type.ToUpper() + ", " + 
-				param_MovieProfile.Country.ToUpper() + ", +" +
-				param_MovieProfile.Rating.ToString();
+				"[" + param_MovieProfile.Type.ToUpper() + "][" + 
+				param_MovieProfile.Country.ToUpper() + "][+" +
+				param_MovieProfile.Rating.ToString() + "]";
+			string[] p = param_MovieProfile.FilePath.Split(new string[] {"\\"}, StringSplitOptions.RemoveEmptyEntries);
+			if (p.Length > 0) {
+				p[p.Length-1] = "";
+				this.Text += "[" + string.Join("\\", p) + "]";
+			}
 			
 			lblCode.Text = param_MovieProfile.Code;
 			lblTitle.Text = param_MovieProfile.Title;
@@ -115,6 +125,8 @@ namespace xDB2013
 				flowTag.Controls.Add(lbl);
 			}
 
+			param_MovieProfile.CheckFileConnect();
+			btnPlay.Visible = param_MovieProfile.FileConnect.Equals("Y");
 		}
 		private void RefreshTabMovieImage(int idx)
 		{
@@ -196,6 +208,45 @@ namespace xDB2013
 				MovieDB.SaveMovieProfile(param_MovieProfile);
 				zLog.Write("Save CountPlay to MovieProfile {" + hKey + "}");
 			}			
+		}
+
+		private void btnPlay_Click(object sender, EventArgs e)
+		{
+			if (! btnPlay.Visible) return;
+			_Do_PlayMovie();
+		}
+		private void btnPrevious_Click(object sender, EventArgs e)
+		{
+			if (! btnPrevious.Visible) return;
+			if (null == param_MovieList) return;
+			MovieProfile mp = param_MovieList.GetPreviousMovie();
+			if (null==mp) return;
+			param_MovieProfile = mp;
+			_Refresh_param_MovieProfile();
+		}
+		private void btnNext_Click(object sender, EventArgs e)
+		{
+			if (!btnNext.Visible) return;
+			if (null == param_MovieList) return;
+			MovieProfile mp = param_MovieList.GetNextMovie();
+			if (null==mp) return;
+			param_MovieProfile = mp;
+			_Refresh_param_MovieProfile();
+		}
+		private void _Refresh_param_MovieProfile() {
+			tabMain.TabPages.Remove(tabFrontCover);
+			tabMain.TabPages.Remove(tabBackCover);
+			tabMain.TabPages.Remove(tabScreenShot1);
+			tabMain.TabPages.Remove(tabScreenShot2);
+			zLog.Write(
+				"Form ProfileViewer Refresh_param_MovieProfile: Movie->FilePath("
+				+ param_MovieProfile.FilePath
+				+ ") Hash={"
+				+ param_MovieProfile.Hash + "}");
+
+			refreshDataFromParam();
+			RefreshTabMovieImage(0);
+		
 		}
 		
 	}

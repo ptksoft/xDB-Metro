@@ -192,6 +192,7 @@ namespace xDB2013
             switch (e.KeyCode)
             {
                 case Keys.F1: _Do_AddActress(); break;
+                case Keys.F2: _Do_OneJav(); break;
                 case Keys.F3: _Do_Search(); break;
                 case Keys.F4: _Do_AddTag(); break;
                 case Keys.F5: _Do_PlayMovie(); break;
@@ -388,6 +389,10 @@ namespace xDB2013
         {
             _Do_Search();
         }
+		private void lblOneJav_Click(object sender, EventArgs e)
+		{
+			_Do_OneJav();
+		}
         private void lblAdvanceTab_Click(object sender, EventArgs e)
         {
             if (!this.Visible) return;
@@ -627,6 +632,15 @@ namespace xDB2013
             // Start shell process file for run media with your favorite player
             string urlSearchGoogle = "https://www.google.co.th/search?q=" + txtCode.Text.Trim().ToUpper();
             System.Diagnostics.Process.Start(urlSearchGoogle);
+        }
+        private void _Do_OneJav() {
+			if (!this.Visible) return;
+			string code = txtCode.Text.Trim().ToLower().Replace("-","");
+			if (code.Length.Equals(0)) return;
+
+			// Start shell process file for run media with your favorite player
+			string urlOneJav = "https://onejav.com/torrent/" + code;
+			System.Diagnostics.Process.Start(urlOneJav);
         }
         private void _Do_PlayMovie()
         {
@@ -967,7 +981,6 @@ namespace xDB2013
             if (this.param_MovieProfile.Hash.Length != 32) return;
 
             btnSave.Enabled = true;
-        }
-		                
+        }				                
     }
 }

@@ -40,6 +40,9 @@
 			this.flowTag = new System.Windows.Forms.FlowLayoutPanel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.btnPlay = new System.Windows.Forms.Button();
+			this.btnPrevious = new System.Windows.Forms.Button();
+			this.btnNext = new System.Windows.Forms.Button();
 			this.tabMain.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -130,7 +133,6 @@
 			// flowActress
 			// 
 			this.flowActress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.flowActress.AutoSize = true;
 			this.flowActress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
 			this.flowActress.ForeColor = System.Drawing.Color.Green;
 			this.flowActress.Location = new System.Drawing.Point(693, 134);
@@ -141,7 +143,6 @@
 			// flowTag
 			// 
 			this.flowTag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.flowTag.AutoSize = true;
 			this.flowTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
 			this.flowTag.ForeColor = System.Drawing.Color.Purple;
 			this.flowTag.Location = new System.Drawing.Point(693, 294);
@@ -173,12 +174,57 @@
 			this.label2.TabIndex = 10;
 			this.label2.Text = "Tags";
 			// 
+			// btnPlay
+			// 
+			this.btnPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnPlay.FlatAppearance.BorderSize = 0;
+			this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
+			this.btnPlay.Location = new System.Drawing.Point(803, 448);
+			this.btnPlay.Name = "btnPlay";
+			this.btnPlay.Size = new System.Drawing.Size(69, 70);
+			this.btnPlay.TabIndex = 11;
+			this.btnPlay.TabStop = false;
+			this.btnPlay.UseVisualStyleBackColor = true;
+			this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+			// 
+			// btnPrevious
+			// 
+			this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnPrevious.FlatAppearance.BorderSize = 0;
+			this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
+			this.btnPrevious.Location = new System.Drawing.Point(695, 449);
+			this.btnPrevious.Name = "btnPrevious";
+			this.btnPrevious.Size = new System.Drawing.Size(68, 69);
+			this.btnPrevious.TabIndex = 12;
+			this.btnPrevious.TabStop = false;
+			this.btnPrevious.UseVisualStyleBackColor = true;
+			this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+			// 
+			// btnNext
+			// 
+			this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnNext.FlatAppearance.BorderSize = 0;
+			this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+			this.btnNext.Location = new System.Drawing.Point(912, 449);
+			this.btnNext.Name = "btnNext";
+			this.btnNext.Size = new System.Drawing.Size(68, 69);
+			this.btnNext.TabIndex = 13;
+			this.btnNext.TabStop = false;
+			this.btnNext.UseVisualStyleBackColor = true;
+			this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+			// 
 			// frmProfileViewer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(984, 526);
+			this.Controls.Add(this.btnNext);
+			this.Controls.Add(this.btnPrevious);
+			this.Controls.Add(this.btnPlay);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.flowTag);
@@ -217,5 +263,8 @@
 		private System.Windows.Forms.FlowLayoutPanel flowTag;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button btnPlay;
+		private System.Windows.Forms.Button btnPrevious;
+		private System.Windows.Forms.Button btnNext;
 	}
 }

@@ -31,6 +31,32 @@ namespace xDB2013
                 listMovie.Add((MovieProfile)TheList.Items[i].Tag);
             return (listMovie);
         }
+        public MovieProfile GetNextMovie() {
+			if (TheList.Items.Count < 1) return(null);
+			if (TheList.SelectedIndices.Count < 0) {
+				// select first in list-item
+				TheList.Items[0].Selected = true;
+			}
+			else {						
+				if (TheList.SelectedIndices[0] + 1 >= TheList.Items.Count) return(null);
+				TheList.Items[TheList.SelectedIndices[0]+1].Selected = true;
+			}
+			return((MovieProfile)TheList.SelectedItems[0].Tag);
+        }
+        public MovieProfile GetPreviousMovie() {
+			if (TheList.Items.Count < 1) return (null);
+			if (TheList.SelectedIndices.Count < 0)
+			{
+				// select last in list-item
+				TheList.Items[TheList.Items.Count-1].Selected = true;
+			}
+			else
+			{
+				if (TheList.SelectedIndices[0] - 1 <  0) return (null);
+				TheList.Items[TheList.SelectedIndices[0] - 1].Selected = true;
+			}
+			return ((MovieProfile)TheList.SelectedItems[0].Tag);
+        }
         public void RefreshMovieList(List<MovieProfile> listMovie, string descMovie)
         {
             TheList.BeginUpdate();

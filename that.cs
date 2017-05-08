@@ -375,7 +375,7 @@ namespace xDB2013
 					frmMovieProfile frm = new frmMovieProfile();
 					frm.param_MovieProfile = mProfile;
 					frm.param_MovieList = (ucMovieList)lv.Parent;
-					frm.Show();								
+					frm.Show();
 				}
 				else {
 					movieList_OnDoubleClickMovieList(sender, new EventArgs());
@@ -390,7 +390,8 @@ namespace xDB2013
 				MovieProfile mProfile = (MovieProfile)lv.SelectedItems[0].Tag;
 				frmProfileViewer frm = new frmProfileViewer();
 				frm.param_MovieProfile = mProfile;
-				frm.Show();                
+				frm.param_MovieList = (ucMovieList)lv.Parent;
+				frm.Show();
             }
         }
 
