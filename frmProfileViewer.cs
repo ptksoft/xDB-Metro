@@ -165,6 +165,15 @@ namespace xDB2013
 				tabMain.TabPages.Add(tab);
 			}
 
+			// Clear Existing PictureBox in tab
+			foreach (Control c in tab.Controls) {
+				if (c is PictureBox) {
+					tab.Controls.Remove(c);
+					c.Dispose();
+					zLog.Write("Found Existing picture box, then remove from Tab:" + tab.Name);
+				}
+			}
+			
 			// Create new picture box to load Image into tab
 			tab.Tag = fileImg;
 			PictureBox pcb = new PictureBox();
@@ -172,6 +181,7 @@ namespace xDB2013
 			pcb.Dock = DockStyle.Fill;
 			pcb.SizeMode = PictureBoxSizeMode.Zoom;
 			pcb.Load(fileImg);
+			zLog.Write("Finish load file:[" + fileImg + "] to Tab:" + tab.Name);
 		}				
 		
 		private void frmProfileViewer_KeyUp(object sender, KeyEventArgs e)
@@ -182,6 +192,12 @@ namespace xDB2013
 			}
 			else if (e.KeyCode == Keys.Space) {
 				_Do_PlayMovie();
+			}
+			else if (e.KeyCode == Keys.PageUp) {
+				btnPrevious_Click(sender, new EventArgs());
+			}
+			else if (e.KeyCode == Keys.PageDown) {
+				btnNext_Click(sender, new EventArgs());
 			}
 		}
 		private void _Do_PlayMovie()

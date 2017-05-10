@@ -15,6 +15,12 @@ For Twins Child Support please mail to: ptksoft@gmail.com			:P
 What is new?
 
 ==============================================================================
+Version 17.05.10.1959
+==============================================================================
+- Fix Bug show image on next or previous
+- Add feature hit PageUp for Previous and PageDown for Next in ProfileViewer
+
+==============================================================================
 Version 17.05.08.2012
 ==============================================================================
 - Show file path in ProfileViwer
