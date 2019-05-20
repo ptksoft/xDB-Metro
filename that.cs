@@ -450,5 +450,27 @@ namespace xDB2013
             }
             MessageBox.Show("Success delete " + countSuccess.ToString() + " LastFile Path from " + listMovie.Count.ToString() + " profile");
         }
+		public static void BatchCopyFileToNewPathInCurrentTab(TabPage tabToCopy)
+		{
+			ucMovieList movieList = null;
+			foreach (Control ctl in tabToCopy.Controls)
+				if (ctl is ucMovieList)
+				{
+					movieList = (ucMovieList)ctl;
+					break;
+				}
+			if (movieList == null) return;
+			
+			// Get New File Path To Copy
+			FolderBrowserDialog dir2write = new FolderBrowserDialog();
+			if (dir2write.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
+			that.DebugAndLog("Selected destination folder = " + dir2write.SelectedPath);			
+
+			// Begin Copy File To New Path
+			frmCopyFileStatus frmStatus = new frmCopyFileStatus();
+			frmStatus.pathToWrite = dir2write.SelectedPath;
+			frmStatus.listMovie = movieList.GetListMovie();
+			frmStatus.Show();
+		}
     }
 }

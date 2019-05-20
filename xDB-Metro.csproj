@@ -91,6 +91,12 @@
     <Compile Include="frmCheckAndUpdateProgram.Designer.cs">
       <DependentUpon>frmCheckAndUpdateProgram.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCopyFileStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyFileStatus.Designer.cs">
+      <DependentUpon>frmCopyFileStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,10 @@
     </Compile>
     <EmbeddedResource Include="frmCheckAndUpdateProgram.resx">
       <DependentUpon>frmCheckAndUpdateProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyFileStatus.resx">
+      <DependentUpon>frmCopyFileStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

@@ -442,5 +442,15 @@ namespace xDB2013
             that.BatchDeleteLastFilePathInCurrentTab(this.tabMain.SelectedTab);
         }
 
+		private void copyFileToNewPathToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (this.tabMain.SelectedTab == null)
+			{
+				MessageBox.Show("Please select any MovieList TAB");
+				return;
+			}
+			that.BatchCopyFileToNewPathInCurrentTab(this.tabMain.SelectedTab);
+		}
+
     }
 }
