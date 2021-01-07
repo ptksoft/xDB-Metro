@@ -429,6 +429,7 @@ namespace xDB2013
 
             FolderBrowserDialog dir2open = new FolderBrowserDialog();
             if (dir2open.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
+            that.DebugAndLog("Fetch for dir = " + dir2open.SelectedPath);
             that.ShowWin_ParseProfileFromDirectory(dir2open.SelectedPath);            
         }
 

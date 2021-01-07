@@ -238,12 +238,25 @@ namespace xDB2013
                 if (_FilePath.Contains(value))
                 {
                     Stack<string> bufferStack = new Stack<string>();
-                    while (_FilePath.Count > 0) 
+                    // Try to find current value in FilePath Stack
+                    while (_FilePath.Count > 0)
+                    {
                         if (!_FilePath.Peek().Equals(value))
+                        {
+                            // Save difference path in another stack
                             bufferStack.Push(_FilePath.Pop());
-                    while (bufferStack.Count > 0) 
+                        }
+                        else
+                        {
+                            // Clear same path by POP
+                            _FilePath.Pop();
+                        }
+                    }
+                    // Pull from temp stack to put in FilePath Stack
+                    while (bufferStack.Count > 0)
                         _FilePath.Push(bufferStack.Pop());
-                    // Add this value to TOP
+
+                    // Add this value to TOP of FilePath Stack, Use as it Current Value
                     _FilePath.Push(value);
                     _ModifiedTime = DateTime.Now;
                     that.DebugAndLog("Update Path=" + value + " To MovieProfile{" + _Hash + "}");
